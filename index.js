@@ -44,18 +44,31 @@ async function explainTopic() {
     try {
 
         const prompt = `
-Explain the Python programming concept "${topic}"
-to a beginner.
+You are a friendly Python teacher.
 
-Use simple language.
-Give one short real-world analogy.
-Give one small Python code example.
-Keep the explanation concise.
+Explain this Python concept to a beginner:
+
+${topic}
+
+Your answer must have exactly these sections:
+
+1. Simple Explanation
+2. Real-World Analogy
+3. Python Example
+4. Quick Tip
+
+Use clear, natural English.
+Do not repeat the question.
+Do not repeat sentences.
+Keep the answer under 150 words.
+For the Python example, use a small correct code snippet.
 `;
 
+
         const result = await generator(prompt, {
-            max_new_tokens: 180,
-            temperature: 0.7
+           max_new_tokens: 220,
+temperature: 0.3
+
         });
 
         responseBox.innerHTML =
