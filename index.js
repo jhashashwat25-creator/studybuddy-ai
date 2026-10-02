@@ -14,7 +14,7 @@ async function loadAI() {
 
     generator = await pipeline(
         "text2text-generation",
-        "Xenova/flan-t5-small"
+        "Xenova/Qwen1.5-0.5B-Chat"
     );
 
     responseBox.innerHTML =
