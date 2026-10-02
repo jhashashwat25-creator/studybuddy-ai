@@ -14,8 +14,12 @@ async function loadAI() {
 
     generator = await pipeline(
     "text-generation",
-    "Xenova/Qwen1.5-0.5B-Chat"
+    "onnx-community/Qwen2.5-0.5B-Instruct",
+    {
+        dtype: "q4"
+    }
 );
+
 
 
     responseBox.innerHTML =
