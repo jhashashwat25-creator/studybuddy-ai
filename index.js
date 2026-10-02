@@ -13,9 +13,10 @@ async function loadAI() {
         "⏳ Loading the AI model... This may take a little while the first time.";
 
     generator = await pipeline(
-        "text2text-generation",
-        "Xenova/Qwen1.5-0.5B-Chat"
-    );
+    "text-generation",
+    "Xenova/Qwen1.5-0.5B-Chat"
+);
+
 
     responseBox.innerHTML =
         "✅ StudyBuddy AI is ready! Enter a Python concept.";
